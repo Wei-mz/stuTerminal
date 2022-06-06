@@ -1,0 +1,11 @@
+body {
+    background-color: transparent; 
+    text-align: center; 
+    color: white;
+}
+
+#content {
+    opacity: 0.8;
+    background:#0d0d0d;
+    padding: 30px;
+}

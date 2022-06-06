@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="include/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="include/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="include/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="include/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="include/adminlte/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="include/layer/layer/skin/default/layer.css">
+    <script type="text/javascript">if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }</script>
+    <script type="text/javascript" src="include/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">if (window.module) {
+        module = window.module;
+    }</script>
+    <script type="text/javascript" src="include/react/react.min.js"></script>
+    <script type="text/javascript" src="include/react/react-dom.min.js"></script>
+    <script type="text/javascript" src="include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="include/adminlte/js/app.min.js"></script>
+    <script type="text/javascript" src="include/layer/layer/layer.js"></script>
+</head>
+<body class="skin-blue layout-top-nav">
+
+<!-- index.html-->
+<div class="LoadingShow  hidden">
+    <img src="./res/images/loading.gif" alt="图标失效">
+</div>
+<div class="blank-shade hidden"><h1>黑屏中</h1></div>
+<div id="background_container">
+    <img src="res/images/bg.jpg" width="100%" height="100%">
+</div>
+<div id="main">
+    <div id="headbar">
+        <div class="headitem pull-right hidden">
+            <label id="timeview" class="label" onselectstart="return false;" unselectable="on"></label>
+        </div>
+        <div class="headitem pull-right hidden">
+            <img id="wifi" draggable="false" src="res/images/wifi.png" height="100%" data-toggle="tooltip"
+                 data-placement="bottom"
+                 title="WI-FI" alt="wifi"/>
+        </div>
+        <div class="headitem pull-right" >
+            <img id="ethernet" draggable="false" src="res/images/ethernet.png" height="100%" alt="ethernets"/>
+        </div>
+        <div class="headitem pull-right">
+            <img id="link" draggable="false" src="res/images/unlink.png" height="100%" alt="link"/>
+        </div>
+        <div class="headitem pull-right hidden">
+            <img id="usb" draggable="false" src="res/images/usb.png" height="100%" data-toggle="tooltip" data-placement="bottom"
+                 title="USB" alt="usb"/>
+        </div>
+        <div class="headitem pull-right hidden">
+            <img id="input-method" draggable="false" id="input-method" src="res/images/chinese.png" height="100%" data-toggle="tooltip"
+                 data-placement="bottom"
+                 title="输入法" alt="input-method"/>
+        </div>
+    </div>
+    <div id="titlebar">
+        <label onselectstart="return false;" unselectable="on"></label>
+    </div>
+    <div id="contentbar">
+
+    </div>
+    <div id="hide-menu">
+        <ul>
+            <li id="context_connect"><img src="res/images/link.png">连接</li>
+            <li id="context_setting" class="hidden"><img src="res/images/set.png">设置</li>
+            <li id="context_snapshot" class="hidden"><img src="res/images/snapshot.png">快照</li>
+            <li><hr /></li>
+            <li id="context_suspend" class="hidden"><img src="res/images/suspend.png">挂起</li>
+            <li id="context_shutdown"><img src="res/images/shutdown.png">关机</li>
+            <li id="context_reboot"><img src="res/images/restart.png">重启</li>
+            <li id="context_force_reboot"><img src="res/images/power-off.png">强制重启</li>
+            <li id="context_modify_secret"><img src="res/images/mima.png">密码设置</li>
+            <li><hr /></li>
+            <li id="context_attribute"><img src="res/images/attr.png">属性</li>
+        </ul>
+    </div>
+
+    <table id="userinfo-box" class="table-box">
+        <tr>
+            <td>  </td>
+        </tr>
+        <tr>
+            <td class="left-head pad-right" set-lan="html:username">用户名</td>
+            <td class="pad-left"><input class="form-control" type="text" id="username_info"></td>
+        </tr>
+        <tr>
+            <td class="left-head pad-right" set-lan="html:password">密码</td>
+            <td class="pad-left"><input class="form-control" type="password" id="passwd_info"></td>
+        </tr>
+        <tr>
+            <td id="rdptd">
+                <input class="rdpInput" type="checkbox" id="input_info" >
+                <label for="input_info">&nbsp; 自动连接</label>
+                </td>
+        </tr>   
+    </table>
+    
+    <table id="attribute-box" class="table-box">
+        <tr>
+            <td class="left-head">虚拟机名</td>
+            <td id="vm-name"></td>
+        </tr>
+        <tr>
+            <td class="left-head">虚拟机状态</td>
+            <td id="vm-state"></td>
+        </tr>
+        <tr>
+            <td class="left-head">IP地址</td>
+            <td id="host-ip"></td>
+        </tr>
+        <tr>
+            <td class="left-head">MAC地址</td>
+            <td id="host-mac"></td>
+        </tr>
+    </table>
+    <table id="info-box" class="table-box">
+        <tr>
+            <td class="left-head">名称</td>
+            <td id="infobox_name">教育云客户端</td>
+        </tr>
+        <tr>
+            <td class="left-head">版本</td>
+            <td id="infobox_version"></td>
+        </tr>
+        <tr>
+            <td class="left-head">IP地址</td>
+            <td id="infobox_ipaddress"></td>
+        </tr>
+        <tr>
+            <td class="left-head">MAC</td>
+            <td id="infobox_mac"></td>
+        </tr>
+        <tr>
+            <td class="left-head">编号</td>
+            <td id="infobox_sort">--</td>
+        </tr>
+        <tr>
+            <td class="left-head">升级</td>
+            <td id="infobox_update"><button type="button" class="btn btn-primary">检查升级</button></td>
+        </tr>
+    </table>
+    <div id="toolbar">
+        <div>
+            <div class="toolitem">
+                <ul class="list-group" id="haltTool">
+                    <li class="list-group-item">
+                        <span class="fa fa-power-off fa-3x"></span>
+                    </li>
+                    <li class="list-group-item">关机</li>
+                </ul>
+            </div>
+            <div class="toolitem">
+                <ul class="list-group" id="settingsTool">
+                    <li class="list-group-item">
+                        <span class="fa fa-gear fa-3x"></span>
+                    </li>
+                    <li class="list-group-item">设置</li>
+                </ul>
+            </div>
+            <div class="toolitem hidden">
+                <ul class="list-group" id="toolboxTool">
+                    <li class="list-group-item">
+                        <span class="fa fa-inbox fa-3x"></span>
+                    </li>
+                    <li class="list-group-item">工具箱</li>
+                </ul>
+            </div>
+            <div class="toolitem" id="informationTool">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="fa fa-info-circle fa-3x"></span>
+                    </li>
+                    <li class="list-group-item">信息</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="extra">
+
+</div>
+<div>
+    <img src="./tmp/screen.jpg" alt="" id="screenjpg">
+</div>
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+.net-title{
+    flex-grow: 1;
+}
+.set-network{
+    flex-grow: 7;
+}
+.footer{
+    flex-grow: 2;
+}
+.status{
+    margin-top: 1.5%;
+}
+.img-state{
+    cursor: pointer;
+}
+.control-label,.state{
+    color: white;
+}

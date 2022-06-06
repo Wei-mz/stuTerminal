@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../include/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../include/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../include/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <link rel="stylesheet" href="../include/layer/layer/skin/default/layer.css">
+    
+
+    <script type="text/javascript">if(typeof module === 'object'){window.module=module; module=undefined;}</script>
+    <script type="text/javascript" src="../include/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">if(window.module){module=window.module;}</script>
+    <script type="text/javascript" src="../include/react/react.min.js"></script>
+    <script type="text/javascript" src="../include/react/react-dom.min.js"></script>
+    <script type="text/javascript" src="../include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../include/adminlte/js/app.min.js"></script>
+    <script type="text/javascript" src="../include/layer/layer/layer.js"></script>
+</head>
+<body class="skin-blue layout-top-nav">
+<div id="main">
+    <!--<div class="setting-title">-->
+        <!--<span class="fa fa-arrow-circle-left fa-2x back"></span>-->
+    <!--</div>-->
+    <div class="comment display">
+        <form action="" class="form-horizontal" role="form">
+            <div class="form-group hidden">
+                <label for="display_device" class="col-sm-3 col-xs-3 control-label">显示器</label>
+                <div class="col-sm-9 col-xs-9">
+                    <select name="display_device" id="display_device" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="resolution" class="col-sm-3 col-xs-3 control-label" set-lan="html:display">分辨率</label>
+                <div class="col-sm-9 col-xs-9">
+                    <select name="resolution" id="resolution" class="form-control">
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <form action="" class="form-horizontal form-button" role="form">
+            <div class="form-group ">
+                <!--<div class="col-sm-4 col-xs-4">-->
+                    <!--<button id="cancel" type="button" class="btn btn-primary" set-lan="html:cancel">取消</button>-->
+                <!--</div>-->
+                <div class="col-sm-6 col-xs-6">
+                    <button id="back" type="button" class="btn btn-primary" set-lan="html:back">返回</button>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <button id="apply" type="button" class="btn btn-success" set-lan="html:apply">应用</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="extra"></div>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script src="./setting.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../include/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../include/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../include/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <link rel="stylesheet" href="../css/network.css">
+    <link rel="stylesheet" href="../include/layer/layer/skin/default/layer.css">
+
+    <script type="text/javascript">if(typeof module === 'object'){window.module=module; module=undefined;}</script>
+    <script type="text/javascript" src="../include/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">if(window.module){module=window.module;}</script>
+    <script type="text/javascript" src="../include/react/react.min.js"></script>
+    <script type="text/javascript" src="../include/react/react-dom.min.js"></script>
+    <script type="text/javascript" src="../include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../include/adminlte/js/app.min.js"></script>
+    <script type="text/javascript" src="../include/layer/layer/layer.js"></script>
+</head>
+<body class="skin-blue layout-top-nav" ondragstart="return false;">
+<div id="main">
+    <!--<div class="setting-title">-->
+        <!--<span class="fa fa-arrow-circle-left fa-2x back"></span>-->
+    <!--</div>-->
+    <div class="comment set-network">
+        <form action="" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="set" class="col-sm-3 col-xs-3  control-label" set-lan="html:config">配置</label>
+                <div class="col-sm-9 col-xs-9">
+                    <select id="network_method" class="form-control">
+                        <option value="dhcp" set-lan="html:auto">自动</option>
+                        <option value="static" set-lan="html:static">手动</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ip" class="col-sm-3 col-xs-3 control-label" set-lan="html:IP">IP地址</label>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" name="ipAddr" id="ip" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mask" class="col-sm-3 col-xs-3 control-label" set-lan="html:mask">子网掩码</label>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" name="mask" id="mask" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gateway" class="col-sm-3 col-xs-3 control-label" set-lan="html:gateway">网关</label>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" name="gateway" id="gateway" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dns" class="col-sm-3 col-xs-3 control-label" set-lan="html:dns">DNS</label>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" name="dns" id="dns" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group hidden">
+                <label class="col-sm-3 col-xs-3 control-label">状态</label>
+                <div class="col-sm-9 col-xs-9 status" id="network_status">
+                    <img class="img-state" src="../res/images/active.png" alt="图片">
+                    <span class="state">活跃</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <form action="" class="form-horizontal form-button" role="form">
+            <div class="form-group">
+                <!--<div class="col-sm-4 col-xs-4 hidden">-->
+                    <!--<button id="cancel" type="button" class="btn btn-primary" set-lan="html:cancel">取消</button>-->
+                <!--</div>-->
+                <div class="col-sm-6 col-xs-6">
+                    <button id="back" type="button" class="btn btn-primary" set-lan="html:back">返回</button>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <button id="apply" type="button" class="btn btn-success" set-lan="html:apply">应用</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div id="extra"></div>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script src="./setting.js"></script>
+</body>
+</html>

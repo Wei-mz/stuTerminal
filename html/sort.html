@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编号设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../include/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../include/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../include/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../include/adminlte/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <link rel="stylesheet" href="../css/network.css">
+    <link rel="stylesheet" href="../include/layer/layer/skin/default/layer.css">
+
+    <script type="text/javascript">if(typeof module === 'object'){window.module=module; module=undefined;}</script>
+    <script type="text/javascript" src="../include/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">if(window.module){module=window.module;}</script>
+    <script type="text/javascript" src="../include/react/react.min.js"></script>
+    <script type="text/javascript" src="../include/react/react-dom.min.js"></script>
+    <script type="text/javascript" src="../include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../include/adminlte/js/app.min.js"></script>
+    <script type="text/javascript" src="../include/layer/layer/layer.js"></script>
+</head>
+<body class="skin-blue layout-top-nav" ondragstart="return false;">
+<div id="main">
+    <!--<div class="setting-title">-->
+        <!--<span class="fa fa-arrow-circle-left fa-2x back"></span>-->
+    <!--</div>-->
+    <div class="comment set-network">
+        <form action="" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="sortinput" class="col-sm-3 col-xs-3 control-label" set-lan="html:sort">本机编号</label>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" name="sort" id="sortinput" class="form-control" placeholder="">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <form action="" class="form-horizontal form-button" role="form">
+            <div class="form-group">
+                <!--<div class="col-sm-4 col-xs-4 hidden">-->
+                    <!--<button id="cancel" type="button" class="btn btn-primary" set-lan="html:cancel">取消</button>-->
+                <!--</div>-->
+                <div class="col-sm-6 col-xs-6">
+                    <button id="back" type="button" class="btn btn-primary" set-lan="html:back">返回</button>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <button id="apply" type="button" class="btn btn-success" set-lan="html:apply">应用</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div id="extra"></div>
+<script src="./setting.js"></script>
+</body>
+</html>

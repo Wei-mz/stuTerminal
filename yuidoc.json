@@ -1,0 +1,13 @@
+{
+  "name": "Document",
+  "description": "",
+  "version": "0.1.0",
+  "url": "",
+  "options": {
+    "linkNatives": "true",
+    "outdir": "docs/yuidoc",
+    "ignorePaths": ["js", "docs", "dist", "include"],
+    "exclude": "js,docs,dist,include",
+    "paths": ["jsx", "app.js", "app"]
+  }
+}

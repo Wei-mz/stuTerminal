@@ -1,0 +1,9 @@
+.shot .toolitem{
+
+}
+.shot .toolitem li:nth-child(2){
+    margin-top: 10px;
+}
+.shot .toolitem span.shot1,span.shot2,span.shot3{
+    font-weight: bolder;
+}
